@@ -172,10 +172,8 @@ L’évaluation agentique sur 5 routes étiquetées reste disponible avec `scrip
 
 ## Installation Windows
 
-Si Python n’est pas présent dans le PATH, utilisez la runtime Python fournie par Codex :
 
 ```powershell
-$py = "C:\Users\Probook\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
 & $py -m venv .venv
 & .\.venv\Scripts\python.exe -m pip install -e ".[dev]"
 ```
