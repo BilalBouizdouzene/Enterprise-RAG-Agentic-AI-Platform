@@ -1,0 +1,622 @@
+[
+  {
+    "id": "q001",
+    "question": "Please explain: what is the maximum hotel reimbursement in Paris?",
+    "relevant_document_ids": [
+      "finance_expenses",
+      "finance_travel"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "180 EUR",
+    "question_type": "fact"
+  },
+  {
+    "id": "q002",
+    "question": "In simple terms, what is the maximum hotel reimbursement in Paris?",
+    "relevant_document_ids": [
+      "finance_expenses",
+      "finance_travel"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "180 EUR",
+    "question_type": "fact"
+  },
+  {
+    "id": "q003",
+    "question": "According to the policies, what is the maximum hotel reimbursement in Paris?",
+    "relevant_document_ids": [
+      "finance_expenses",
+      "finance_travel"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "180 EUR",
+    "question_type": "fact"
+  },
+  {
+    "id": "q004",
+    "question": "Summarize this requirement: what is the maximum hotel reimbursement in Paris?",
+    "relevant_document_ids": [
+      "finance_expenses",
+      "finance_travel"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "180 EUR",
+    "question_type": "fact"
+  },
+  {
+    "id": "q005",
+    "question": "Please explain: how much can a hotel in Berlin cost under the travel standard?",
+    "relevant_document_ids": [
+      "finance_travel"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "160 EUR",
+    "question_type": "paraphrase"
+  },
+  {
+    "id": "q006",
+    "question": "In simple terms, how much can a hotel in Berlin cost under the travel standard?",
+    "relevant_document_ids": [
+      "finance_travel"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "160 EUR",
+    "question_type": "paraphrase"
+  },
+  {
+    "id": "q007",
+    "question": "According to the policies, how much can a hotel in Berlin cost under the travel standard?",
+    "relevant_document_ids": [
+      "finance_travel"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "160 EUR",
+    "question_type": "paraphrase"
+  },
+  {
+    "id": "q008",
+    "question": "Summarize this requirement: how much can a hotel in Berlin cost under the travel standard?",
+    "relevant_document_ids": [
+      "finance_travel"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "160 EUR",
+    "question_type": "paraphrase"
+  },
+  {
+    "id": "q009",
+    "question": "Please explain: how many paid working days of annual leave are provided?",
+    "relevant_document_ids": [
+      "hr_leave"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "25 days",
+    "question_type": "fact"
+  },
+  {
+    "id": "q010",
+    "question": "In simple terms, how many paid working days of annual leave are provided?",
+    "relevant_document_ids": [
+      "hr_leave"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "25 days",
+    "question_type": "fact"
+  },
+  {
+    "id": "q011",
+    "question": "According to the policies, how many paid working days of annual leave are provided?",
+    "relevant_document_ids": [
+      "hr_leave"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "25 days",
+    "question_type": "fact"
+  },
+  {
+    "id": "q012",
+    "question": "Summarize this requirement: how many paid working days of annual leave are provided?",
+    "relevant_document_ids": [
+      "hr_leave"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "25 days",
+    "question_type": "fact"
+  },
+  {
+    "id": "q013",
+    "question": "Please explain: how often may an eligible employee work remotely?",
+    "relevant_document_ids": [
+      "hr_remote_work"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "up to three days per week",
+    "question_type": "fact"
+  },
+  {
+    "id": "q014",
+    "question": "In simple terms, how often may an eligible employee work remotely?",
+    "relevant_document_ids": [
+      "hr_remote_work"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "up to three days per week",
+    "question_type": "fact"
+  },
+  {
+    "id": "q015",
+    "question": "According to the policies, how often may an eligible employee work remotely?",
+    "relevant_document_ids": [
+      "hr_remote_work"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "up to three days per week",
+    "question_type": "fact"
+  },
+  {
+    "id": "q016",
+    "question": "Summarize this requirement: how often may an eligible employee work remotely?",
+    "relevant_document_ids": [
+      "hr_remote_work"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "up to three days per week",
+    "question_type": "fact"
+  },
+  {
+    "id": "q017",
+    "question": "Please explain: what should happen after a company laptop is lost?",
+    "relevant_document_ids": [
+      "security_laptop"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "report within one hour",
+    "question_type": "fact"
+  },
+  {
+    "id": "q018",
+    "question": "In simple terms, what should happen after a company laptop is lost?",
+    "relevant_document_ids": [
+      "security_laptop"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "report within one hour",
+    "question_type": "fact"
+  },
+  {
+    "id": "q019",
+    "question": "According to the policies, what should happen after a company laptop is lost?",
+    "relevant_document_ids": [
+      "security_laptop"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "report within one hour",
+    "question_type": "fact"
+  },
+  {
+    "id": "q020",
+    "question": "Summarize this requirement: what should happen after a company laptop is lost?",
+    "relevant_document_ids": [
+      "security_laptop"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "report within one hour",
+    "question_type": "fact"
+  },
+  {
+    "id": "q021",
+    "question": "Please explain: what is the minimum password length?",
+    "relevant_document_ids": [
+      "security_passwords"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "14 characters",
+    "question_type": "fact"
+  },
+  {
+    "id": "q022",
+    "question": "In simple terms, what is the minimum password length?",
+    "relevant_document_ids": [
+      "security_passwords"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "14 characters",
+    "question_type": "fact"
+  },
+  {
+    "id": "q023",
+    "question": "According to the policies, what is the minimum password length?",
+    "relevant_document_ids": [
+      "security_passwords"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "14 characters",
+    "question_type": "fact"
+  },
+  {
+    "id": "q024",
+    "question": "Summarize this requirement: what is the minimum password length?",
+    "relevant_document_ids": [
+      "security_passwords"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "14 characters",
+    "question_type": "fact"
+  },
+  {
+    "id": "q025",
+    "question": "Please explain: when must a critical vendor report a material incident?",
+    "relevant_document_ids": [
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "within 24 hours",
+    "question_type": "fact"
+  },
+  {
+    "id": "q026",
+    "question": "In simple terms, when must a critical vendor report a material incident?",
+    "relevant_document_ids": [
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "within 24 hours",
+    "question_type": "fact"
+  },
+  {
+    "id": "q027",
+    "question": "According to the policies, when must a critical vendor report a material incident?",
+    "relevant_document_ids": [
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "within 24 hours",
+    "question_type": "fact"
+  },
+  {
+    "id": "q028",
+    "question": "Summarize this requirement: when must a critical vendor report a material incident?",
+    "relevant_document_ids": [
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "within 24 hours",
+    "question_type": "fact"
+  },
+  {
+    "id": "q029",
+    "question": "Please explain: who approves contractual vendor terms?",
+    "relevant_document_ids": [
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "Legal",
+    "question_type": "fact"
+  },
+  {
+    "id": "q030",
+    "question": "In simple terms, who approves contractual vendor terms?",
+    "relevant_document_ids": [
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "Legal",
+    "question_type": "fact"
+  },
+  {
+    "id": "q031",
+    "question": "According to the policies, who approves contractual vendor terms?",
+    "relevant_document_ids": [
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "Legal",
+    "question_type": "fact"
+  },
+  {
+    "id": "q032",
+    "question": "Summarize this requirement: who approves contractual vendor terms?",
+    "relevant_document_ids": [
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "Legal",
+    "question_type": "fact"
+  },
+  {
+    "id": "q033",
+    "question": "Please explain: what is the approval requirement for a purchase of EUR 3000?",
+    "relevant_document_ids": [
+      "finance_approvals"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "department director",
+    "question_type": "fact"
+  },
+  {
+    "id": "q034",
+    "question": "In simple terms, what is the approval requirement for a purchase of EUR 3000?",
+    "relevant_document_ids": [
+      "finance_approvals"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "department director",
+    "question_type": "fact"
+  },
+  {
+    "id": "q035",
+    "question": "According to the policies, what is the approval requirement for a purchase of EUR 3000?",
+    "relevant_document_ids": [
+      "finance_approvals"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "department director",
+    "question_type": "fact"
+  },
+  {
+    "id": "q036",
+    "question": "Summarize this requirement: what is the approval requirement for a purchase of EUR 3000?",
+    "relevant_document_ids": [
+      "finance_approvals"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "department director",
+    "question_type": "fact"
+  },
+  {
+    "id": "q037",
+    "question": "Please explain: what happens to access after termination?",
+    "relevant_document_ids": [
+      "security_passwords"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "removed within one business day",
+    "question_type": "fact"
+  },
+  {
+    "id": "q038",
+    "question": "In simple terms, what happens to access after termination?",
+    "relevant_document_ids": [
+      "security_passwords"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "removed within one business day",
+    "question_type": "fact"
+  },
+  {
+    "id": "q039",
+    "question": "According to the policies, what happens to access after termination?",
+    "relevant_document_ids": [
+      "security_passwords"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "removed within one business day",
+    "question_type": "fact"
+  },
+  {
+    "id": "q040",
+    "question": "Summarize this requirement: what happens to access after termination?",
+    "relevant_document_ids": [
+      "security_passwords"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "removed within one business day",
+    "question_type": "fact"
+  },
+  {
+    "id": "q041",
+    "question": "Please explain: which policy became effective in 2025?",
+    "relevant_document_ids": [
+      "hr_remote_work",
+      "hr_onboarding",
+      "finance_expenses",
+      "finance_travel",
+      "security_laptop",
+      "security_passwords",
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "one or more policies",
+    "question_type": "metadata"
+  },
+  {
+    "id": "q042",
+    "question": "In simple terms, which policy became effective in 2025?",
+    "relevant_document_ids": [
+      "hr_remote_work",
+      "hr_onboarding",
+      "finance_expenses",
+      "finance_travel",
+      "security_laptop",
+      "security_passwords",
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "one or more policies",
+    "question_type": "metadata"
+  },
+  {
+    "id": "q043",
+    "question": "According to the policies, which policy became effective in 2025?",
+    "relevant_document_ids": [
+      "hr_remote_work",
+      "hr_onboarding",
+      "finance_expenses",
+      "finance_travel",
+      "security_laptop",
+      "security_passwords",
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "one or more policies",
+    "question_type": "metadata"
+  },
+  {
+    "id": "q044",
+    "question": "Summarize this requirement: which policy became effective in 2025?",
+    "relevant_document_ids": [
+      "hr_remote_work",
+      "hr_onboarding",
+      "finance_expenses",
+      "finance_travel",
+      "security_laptop",
+      "security_passwords",
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "one or more policies",
+    "question_type": "metadata"
+  },
+  {
+    "id": "q045",
+    "question": "Please explain: compare hotel limits in Paris and Berlin.",
+    "relevant_document_ids": [
+      "finance_expenses",
+      "finance_travel"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "Paris 180 EUR and Berlin 160 EUR",
+    "question_type": "multi_document"
+  },
+  {
+    "id": "q046",
+    "question": "In simple terms, compare hotel limits in Paris and Berlin.",
+    "relevant_document_ids": [
+      "finance_expenses",
+      "finance_travel"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "Paris 180 EUR and Berlin 160 EUR",
+    "question_type": "multi_document"
+  },
+  {
+    "id": "q047",
+    "question": "According to the policies, compare hotel limits in Paris and Berlin.",
+    "relevant_document_ids": [
+      "finance_expenses",
+      "finance_travel"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "Paris 180 EUR and Berlin 160 EUR",
+    "question_type": "multi_document"
+  },
+  {
+    "id": "q048",
+    "question": "Summarize this requirement: compare hotel limits in Paris and Berlin.",
+    "relevant_document_ids": [
+      "finance_expenses",
+      "finance_travel"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "Paris 180 EUR and Berlin 160 EUR",
+    "question_type": "multi_document"
+  },
+  {
+    "id": "q049",
+    "question": "Please explain: compare laptop incident reporting with vendor incident reporting.",
+    "relevant_document_ids": [
+      "security_laptop",
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "one hour versus 24 hours",
+    "question_type": "multi_document"
+  },
+  {
+    "id": "q050",
+    "question": "In simple terms, compare laptop incident reporting with vendor incident reporting.",
+    "relevant_document_ids": [
+      "security_laptop",
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "one hour versus 24 hours",
+    "question_type": "multi_document"
+  },
+  {
+    "id": "q051",
+    "question": "According to the policies, compare laptop incident reporting with vendor incident reporting.",
+    "relevant_document_ids": [
+      "security_laptop",
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "one hour versus 24 hours",
+    "question_type": "multi_document"
+  },
+  {
+    "id": "q052",
+    "question": "Summarize this requirement: compare laptop incident reporting with vendor incident reporting.",
+    "relevant_document_ids": [
+      "security_laptop",
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "one hour versus 24 hours",
+    "question_type": "multi_document"
+  },
+  {
+    "id": "q053",
+    "question": "Please explain: what is the retention period for every customer record?",
+    "relevant_document_ids": [],
+    "relevant_chunk_ids": [],
+    "expected_answer": "not specified",
+    "question_type": "unanswerable"
+  },
+  {
+    "id": "q054",
+    "question": "In simple terms, what is the retention period for every customer record?",
+    "relevant_document_ids": [],
+    "relevant_chunk_ids": [],
+    "expected_answer": "not specified",
+    "question_type": "unanswerable"
+  },
+  {
+    "id": "q055",
+    "question": "According to the policies, what is the retention period for every customer record?",
+    "relevant_document_ids": [],
+    "relevant_chunk_ids": [],
+    "expected_answer": "not specified",
+    "question_type": "unanswerable"
+  },
+  {
+    "id": "q056",
+    "question": "Summarize this requirement: what is the retention period for every customer record?",
+    "relevant_document_ids": [],
+    "relevant_chunk_ids": [],
+    "expected_answer": "not specified",
+    "question_type": "unanswerable"
+  },
+  {
+    "id": "q057",
+    "question": "Please explain: what is the maximum meal reimbursement in Madrid?",
+    "relevant_document_ids": [],
+    "relevant_chunk_ids": [],
+    "expected_answer": "not specified",
+    "question_type": "unanswerable"
+  },
+  {
+    "id": "q058",
+    "question": "In simple terms, what is the maximum meal reimbursement in Madrid?",
+    "relevant_document_ids": [],
+    "relevant_chunk_ids": [],
+    "expected_answer": "not specified",
+    "question_type": "unanswerable"
+  },
+  {
+    "id": "q059",
+    "question": "According to the policies, what is the maximum meal reimbursement in Madrid?",
+    "relevant_document_ids": [],
+    "relevant_chunk_ids": [],
+    "expected_answer": "not specified",
+    "question_type": "unanswerable"
+  },
+  {
+    "id": "q060",
+    "question": "Summarize this requirement: what is the maximum meal reimbursement in Madrid?",
+    "relevant_document_ids": [],
+    "relevant_chunk_ids": [],
+    "expected_answer": "not specified",
+    "question_type": "unanswerable"
+  }
+]

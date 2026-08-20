@@ -139,4 +139,4 @@ tests/                    Tests unitaires et API
 
 ## Limites et améliorations futures
 
-Le corpus de démonstration est fictif et les 600 documents additionnels sont générés pour tester la volumétrie, pas pour représenter une entreprise réelle. Le provider template ne remplace pas l’évaluation d’un LLM réel, la qualité du hashing ne représente pas celle d’un modèle d’embeddings multilingue, et le CrossEncoder n’a pas été exécuté dans le benchmark par défaut. Avant une exposition publique, il reste à ajouter OIDC/SSO + RBAC, OCR/vision pour les images, antivirus des uploads, reverse proxy HTTPS, sauvegardes et monitoring externe.
+Le corpus de démonstration est fictif et les 600 documents additionnels sont générés pour tester la volumétrie, pas pour représenter une entreprise réelle. Le provider template ne remplace pas l’évaluation d’un LLM réel, la qualité du hashing ne représente pas celle d’un modèle d’embeddings multilingue, et le CrossEncoder n’a pas été exécuté dans le benchmark par défaut.

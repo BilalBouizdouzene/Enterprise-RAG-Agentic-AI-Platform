@@ -1,0 +1,6 @@
+{
+  "questions": 60,
+  "expected_signal_rate": 0.7166666666666667,
+  "context_support_rate": 0.9166666666666666,
+  "refusal_rate": 0.13333333333333333
+}

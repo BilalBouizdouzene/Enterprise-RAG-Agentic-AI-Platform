@@ -1,0 +1,34 @@
+[
+  {
+    "pipeline": "BM25",
+    "questions": 52,
+    "recall@5": 0.9326923076923077,
+    "mrr": 0.9166666666666666,
+    "ndcg@5": 0.9031681232906403,
+    "latency_ms_mean": 8.405938462461704
+  },
+  {
+    "pipeline": "Dense",
+    "questions": 52,
+    "recall@5": 0.5068681318681318,
+    "mrr": 0.4505112942612942,
+    "ndcg@5": 0.4238570021270988,
+    "latency_ms_mean": 0.4701000154734804
+  },
+  {
+    "pipeline": "Hybrid",
+    "questions": 52,
+    "recall@5": 0.7307692307692307,
+    "mrr": 0.6792723302338687,
+    "ndcg@5": 0.6527124895826246,
+    "latency_ms_mean": 11.138732688358196
+  },
+  {
+    "pipeline": "Hybrid + Reranker (lexical fallback)",
+    "questions": 52,
+    "recall@5": 0.7815934065934067,
+    "mrr": 0.7980769230769231,
+    "ndcg@5": 0.7712117736182846,
+    "latency_ms_mean": 10.562576917716516
+  }
+]

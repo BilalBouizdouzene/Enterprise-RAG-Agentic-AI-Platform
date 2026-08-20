@@ -1,0 +1,33 @@
+[
+  {
+    "question": "What is the remote work policy?",
+    "expected_tools": [
+      "document_search"
+    ]
+  },
+  {
+    "question": "How many employees work in France?",
+    "expected_tools": [
+      "sql_query"
+    ]
+  },
+  {
+    "question": "What percentage of employees work in France?",
+    "expected_tools": [
+      "sql_query",
+      "calculator"
+    ]
+  },
+  {
+    "question": "What is the password expiration policy?",
+    "expected_tools": [
+      "document_search"
+    ]
+  },
+  {
+    "question": "What are the average travel expenses?",
+    "expected_tools": [
+      "sql_query"
+    ]
+  }
+]

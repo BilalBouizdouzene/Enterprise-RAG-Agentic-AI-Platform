@@ -1,0 +1,64 @@
+[
+  {
+    "question": "What is the remote work policy?",
+    "expected_tools": [
+      "document_search"
+    ],
+    "actual_tools": [
+      "document_search"
+    ],
+    "route_correct": true,
+    "tool_calls": 1,
+    "retries": 0
+  },
+  {
+    "question": "How many employees work in France?",
+    "expected_tools": [
+      "sql_query"
+    ],
+    "actual_tools": [
+      "sql_query"
+    ],
+    "route_correct": true,
+    "tool_calls": 1,
+    "retries": 0
+  },
+  {
+    "question": "What percentage of employees work in France?",
+    "expected_tools": [
+      "sql_query",
+      "calculator"
+    ],
+    "actual_tools": [
+      "sql_query",
+      "calculator"
+    ],
+    "route_correct": true,
+    "tool_calls": 2,
+    "retries": 0
+  },
+  {
+    "question": "What is the password expiration policy?",
+    "expected_tools": [
+      "document_search"
+    ],
+    "actual_tools": [
+      "document_search"
+    ],
+    "route_correct": true,
+    "tool_calls": 1,
+    "retries": 0
+  },
+  {
+    "question": "What are the average travel expenses?",
+    "expected_tools": [
+      "sql_query"
+    ],
+    "actual_tools": [
+      "sql_query"
+    ],
+    "route_correct": true,
+    "tool_calls": 1,
+    "retries": 0
+  }
+]
