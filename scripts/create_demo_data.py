@@ -404,16 +404,16 @@ def write_documents(generated_count: int = 600) -> list[dict[str, str]]:
 
 def write_evaluation(records: list[dict[str, str]]) -> None:
     questions = [
-        ("What is the maximum hotel reimbursement in Paris?", ["finance_expenses", "finance_travel"], "180 EUR", "fact"),
-        ("How much can a hotel in Berlin cost under the travel standard?", ["finance_travel"], "160 EUR", "paraphrase"),
-        ("How many paid working days of annual leave are provided?", ["hr_leave"], "25 days", "fact"),
-        ("How often may an eligible employee work remotely?", ["hr_remote_work"], "up to three days per week", "fact"),
-        ("What should happen after a company laptop is lost?", ["security_laptop"], "report within one hour", "fact"),
-        ("What is the minimum password length?", ["security_passwords"], "14 characters", "fact"),
-        ("When must a critical vendor report a material incident?", ["legal_vendors"], "within 24 hours", "fact"),
-        ("Who approves contractual vendor terms?", ["legal_vendors"], "Legal", "fact"),
-        ("What is the approval requirement for a purchase of EUR 3000?", ["finance_approvals"], "department director", "fact"),
-        ("What happens to access after termination?", ["security_passwords"], "removed within one business day", "fact"),
+        ("What is the maximum hotel reimbursement in Paris?", ["finance_expenses", "finance_travel"], "180 EUR", "lexical_exact"),
+        ("How much can a hotel in Berlin cost under the travel standard?", ["finance_travel"], "160 EUR", "semantic_paraphrase"),
+        ("How many paid working days of annual leave are provided?", ["hr_leave"], "25 days", "lexical_exact"),
+        ("How often may an eligible employee work remotely?", ["hr_remote_work"], "up to three days per week", "lexical_exact"),
+        ("What should happen after a company laptop is lost?", ["security_laptop"], "report within one hour", "lexical_exact"),
+        ("What is the minimum password length?", ["security_passwords"], "14 characters", "lexical_exact"),
+        ("When must a critical vendor report a material incident?", ["legal_vendors"], "within 24 hours", "lexical_exact"),
+        ("Who approves contractual vendor terms?", ["legal_vendors"], "Legal", "lexical_exact"),
+        ("What is the approval requirement for a purchase of EUR 3000?", ["finance_approvals"], "department director", "lexical_exact"),
+        ("What happens to access after termination?", ["security_passwords"], "removed within one business day", "lexical_exact"),
         ("Which policy became effective in 2025?", ["hr_remote_work", "hr_onboarding", "finance_expenses", "finance_travel", "security_laptop", "security_passwords", "legal_vendors"], "one or more policies", "metadata"),
         ("Compare hotel limits in Paris and Berlin.", ["finance_expenses", "finance_travel"], "Paris 180 EUR and Berlin 160 EUR", "multi_document"),
         ("Compare laptop incident reporting with vendor incident reporting.", ["security_laptop", "legal_vendors"], "one hour versus 24 hours", "multi_document"),
@@ -438,8 +438,32 @@ def write_evaluation(records: list[dict[str, str]]) -> None:
                 "relevant_chunk_ids": [],
                 "expected_answer": answer,
                 "question_type": qtype,
+                "category": qtype,
             })
             index += 1
+    additional_questions = [
+        ("What nightly lodging amount can an employee claim in the French capital?", ["finance_expenses", "finance_travel"], "180 EUR", "semantic_paraphrase"),
+        ("During a trip to Germany's capital, what accommodation ceiling applies?", ["finance_travel"], "160 EUR", "semantic_paraphrase"),
+        ("How many annual paid workdays are granted to a full-time employee each year?", ["hr_leave"], "25 days", "semantic_paraphrase"),
+        ("What is the weekly remote-work allowance for an eligible staff member?", ["hr_remote_work"], "up to three days per week", "semantic_paraphrase"),
+        ("After a corporate notebook goes missing, what is the reporting deadline?", ["security_laptop"], "report within one hour", "semantic_paraphrase"),
+        ("How long does a critical supplier have to disclose a material incident?", ["legal_vendors"], "within 24 hours", "semantic_paraphrase"),
+        ("What minimum number of characters must a Northstar password contain?", ["security_passwords"], "14 characters", "semantic_paraphrase"),
+        ("Who signs off on the contractual terms of a supplier?", ["legal_vendors"], "Legal", "semantic_paraphrase"),
+        ("Which team owns technical risk for a vendor?", ["legal_vendors"], "Security", "entity_or_acronym"),
+        ("What agreement is required for a vendor handling personal data?", ["legal_vendors"], "data-processing agreement", "entity_or_acronym"),
+    ]
+    for question, docs, answer, category in additional_questions:
+        rows.append({
+            "id": f"q{index:03d}",
+            "question": question,
+            "relevant_document_ids": docs,
+            "relevant_chunk_ids": [],
+            "expected_answer": answer,
+            "question_type": category,
+            "category": category,
+        })
+        index += 1
     EVAL.mkdir(parents=True, exist_ok=True)
     (EVAL / "retrieval_questions.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
     agent_questions = [
@@ -461,7 +485,7 @@ def main() -> None:
     random.seed(42)
     records = write_documents(args.generated_count)
     write_evaluation(records)
-    print(f"Created {len(records)} documents ({args.generated_count} scalable synthetic documents) and 60 evaluation questions.")
+    print(f"Created {len(records)} documents ({args.generated_count} scalable synthetic documents) and 70 evaluation questions.")
 
 
 if __name__ == "__main__":

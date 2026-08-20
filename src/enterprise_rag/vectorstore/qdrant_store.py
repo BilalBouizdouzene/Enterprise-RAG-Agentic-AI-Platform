@@ -73,16 +73,44 @@ class QdrantVectorStore:
         if self.collection_exists():
             self.client.delete_collection(self.collection_name)
 
+    def _collection_dimension(self) -> int | None:
+        if not self.collection_exists():
+            return None
+        info = self.client.get_collection(self.collection_name)
+        vectors = info.config.params.vectors
+        if isinstance(vectors, dict):
+            vectors = next(iter(vectors.values()), None)
+        return int(getattr(vectors, "size", 0) or 0) or None
+
+    def ensure_collection(self, dimension: int, rebuild_on_mismatch: bool = True) -> bool:
+        """Ensure that the collection dimension matches the active embedder.
+
+        Qdrant collections cannot change vector size in place. Rebuilding the local
+        collection on a model/dimension change prevents stale incompatible indexes.
+        """
+        existing = self._collection_dimension()
+        changed = False
+        if existing is not None and existing != dimension:
+            if not rebuild_on_mismatch:
+                raise ValueError(f"Qdrant collection dimension {existing} != embedder dimension {dimension}")
+            self.delete_collection()
+            changed = True
+        if not self.collection_exists():
+            from qdrant_client.models import Distance, VectorParams
+
+            self.client.create_collection(
+                collection_name=self.collection_name,
+                vectors_config=VectorParams(size=dimension, distance=Distance.COSINE),
+            )
+            changed = True
+        return changed
+
     def add_chunks(self, chunks: list[DocumentChunk], vectors: np.ndarray) -> None:
-        from qdrant_client.models import Distance, PointStruct, VectorParams
+        from qdrant_client.models import PointStruct
 
         if len(chunks) != len(vectors):
             raise ValueError("chunks and vectors must have the same length")
-        if not self.collection_exists():
-            self.client.create_collection(
-                collection_name=self.collection_name,
-                vectors_config=VectorParams(size=int(vectors.shape[1]), distance=Distance.COSINE),
-            )
+        self.ensure_collection(int(vectors.shape[1]))
         points = [PointStruct(id=index, vector=vector.tolist(), payload=chunk.as_payload()) for index, (chunk, vector) in enumerate(zip(chunks, vectors, strict=True))]
         self.client.upsert(collection_name=self.collection_name, points=points)
 

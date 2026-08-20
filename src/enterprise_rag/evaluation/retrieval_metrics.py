@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import math
+from collections import defaultdict
 from collections.abc import Iterable
 
 
@@ -49,3 +50,27 @@ def evaluate_ranking(ranked: list[str], relevant: Iterable[str], cutoffs: tuple[
     result["mrr"] = reciprocal_rank(ranked, relevant)
     result["ndcg@5"] = ndcg_at_k(ranked, relevant, 5)
     return result
+
+
+def aggregate_metrics(rows: list[dict], group_field: str | None = None) -> list[dict[str, float | str]]:
+    """Average ranking metrics, optionally by question category.
+
+    Rows are expected to contain the output of ``evaluate_ranking`` and a
+    ``latency_ms`` value. Empty relevant sets should be filtered before calling
+    this function because retrieval ranking is undefined for them.
+    """
+    groups: dict[str, list[dict]] = defaultdict(list)
+    for row in rows:
+        key = str(row.get(group_field, "all")) if group_field else "all"
+        groups[key].append(row)
+    metric_names = [
+        "recall@1", "recall@3", "recall@5", "recall@10",
+        "mrr", "ndcg@5", "hit_rate@5", "latency_ms",
+    ]
+    output = []
+    for key, group in sorted(groups.items()):
+        item: dict[str, float | str] = {group_field or "group": key, "questions": len(group)}
+        for name in metric_names:
+            item[name] = sum(float(row.get(name, 0.0)) for row in group) / max(len(group), 1)
+        output.append(item)
+    return output

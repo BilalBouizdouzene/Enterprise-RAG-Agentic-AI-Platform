@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 
 from enterprise_rag.retrieval.base import RetrievalResult
@@ -57,3 +58,22 @@ def context_with_citations(results: list[RetrievalResult], citations: list[Citat
             seen_documents.add(result.document_id)
             blocks.append(f"[{citation.label}] {result.text}")
     return "\n\n".join(blocks)
+
+
+def cited_labels(text: str) -> set[str]:
+    return set(re.findall(r"\[S(\d+)\]", text or ""))
+
+
+def citation_integrity(answer: str, citations: list[Citation], retrieved: list[RetrievalResult]) -> dict[str, float | bool]:
+    """Check that cited labels resolve to sources actually supplied as context."""
+    labels = {citation.label[1:] for citation in citations}
+    used = cited_labels(answer)
+    resolved = used <= labels
+    retrieved_documents = {result.document_id for result in retrieved}
+    source_documents = {citation.document_id for citation in citations}
+    grounded_sources = source_documents <= retrieved_documents
+    return {
+        "integrity": float(resolved and grounded_sources),
+        "unresolved_label_rate": 0.0 if resolved else len(used - labels) / max(len(used), 1),
+        "sources_grounded": grounded_sources,
+    }

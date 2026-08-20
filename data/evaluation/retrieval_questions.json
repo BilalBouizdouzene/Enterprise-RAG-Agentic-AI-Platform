@@ -8,7 +8,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "180 EUR",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q002",
@@ -19,7 +20,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "180 EUR",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q003",
@@ -30,7 +32,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "180 EUR",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q004",
@@ -41,7 +44,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "180 EUR",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q005",
@@ -51,7 +55,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "160 EUR",
-    "question_type": "paraphrase"
+    "question_type": "semantic_paraphrase",
+    "category": "semantic_paraphrase"
   },
   {
     "id": "q006",
@@ -61,7 +66,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "160 EUR",
-    "question_type": "paraphrase"
+    "question_type": "semantic_paraphrase",
+    "category": "semantic_paraphrase"
   },
   {
     "id": "q007",
@@ -71,7 +77,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "160 EUR",
-    "question_type": "paraphrase"
+    "question_type": "semantic_paraphrase",
+    "category": "semantic_paraphrase"
   },
   {
     "id": "q008",
@@ -81,7 +88,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "160 EUR",
-    "question_type": "paraphrase"
+    "question_type": "semantic_paraphrase",
+    "category": "semantic_paraphrase"
   },
   {
     "id": "q009",
@@ -91,7 +99,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "25 days",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q010",
@@ -101,7 +110,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "25 days",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q011",
@@ -111,7 +121,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "25 days",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q012",
@@ -121,7 +132,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "25 days",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q013",
@@ -131,7 +143,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "up to three days per week",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q014",
@@ -141,7 +154,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "up to three days per week",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q015",
@@ -151,7 +165,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "up to three days per week",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q016",
@@ -161,7 +176,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "up to three days per week",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q017",
@@ -171,7 +187,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "report within one hour",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q018",
@@ -181,7 +198,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "report within one hour",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q019",
@@ -191,7 +209,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "report within one hour",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q020",
@@ -201,7 +220,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "report within one hour",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q021",
@@ -211,7 +231,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "14 characters",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q022",
@@ -221,7 +242,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "14 characters",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q023",
@@ -231,7 +253,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "14 characters",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q024",
@@ -241,7 +264,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "14 characters",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q025",
@@ -251,7 +275,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "within 24 hours",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q026",
@@ -261,7 +286,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "within 24 hours",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q027",
@@ -271,7 +297,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "within 24 hours",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q028",
@@ -281,7 +308,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "within 24 hours",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q029",
@@ -291,7 +319,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "Legal",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q030",
@@ -301,7 +330,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "Legal",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q031",
@@ -311,7 +341,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "Legal",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q032",
@@ -321,7 +352,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "Legal",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q033",
@@ -331,7 +363,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "department director",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q034",
@@ -341,7 +374,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "department director",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q035",
@@ -351,7 +385,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "department director",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q036",
@@ -361,7 +396,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "department director",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q037",
@@ -371,7 +407,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "removed within one business day",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q038",
@@ -381,7 +418,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "removed within one business day",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q039",
@@ -391,7 +429,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "removed within one business day",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q040",
@@ -401,7 +440,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "removed within one business day",
-    "question_type": "fact"
+    "question_type": "lexical_exact",
+    "category": "lexical_exact"
   },
   {
     "id": "q041",
@@ -417,7 +457,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "one or more policies",
-    "question_type": "metadata"
+    "question_type": "metadata",
+    "category": "metadata"
   },
   {
     "id": "q042",
@@ -433,7 +474,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "one or more policies",
-    "question_type": "metadata"
+    "question_type": "metadata",
+    "category": "metadata"
   },
   {
     "id": "q043",
@@ -449,7 +491,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "one or more policies",
-    "question_type": "metadata"
+    "question_type": "metadata",
+    "category": "metadata"
   },
   {
     "id": "q044",
@@ -465,7 +508,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "one or more policies",
-    "question_type": "metadata"
+    "question_type": "metadata",
+    "category": "metadata"
   },
   {
     "id": "q045",
@@ -476,7 +520,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "Paris 180 EUR and Berlin 160 EUR",
-    "question_type": "multi_document"
+    "question_type": "multi_document",
+    "category": "multi_document"
   },
   {
     "id": "q046",
@@ -487,7 +532,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "Paris 180 EUR and Berlin 160 EUR",
-    "question_type": "multi_document"
+    "question_type": "multi_document",
+    "category": "multi_document"
   },
   {
     "id": "q047",
@@ -498,7 +544,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "Paris 180 EUR and Berlin 160 EUR",
-    "question_type": "multi_document"
+    "question_type": "multi_document",
+    "category": "multi_document"
   },
   {
     "id": "q048",
@@ -509,7 +556,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "Paris 180 EUR and Berlin 160 EUR",
-    "question_type": "multi_document"
+    "question_type": "multi_document",
+    "category": "multi_document"
   },
   {
     "id": "q049",
@@ -520,7 +568,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "one hour versus 24 hours",
-    "question_type": "multi_document"
+    "question_type": "multi_document",
+    "category": "multi_document"
   },
   {
     "id": "q050",
@@ -531,7 +580,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "one hour versus 24 hours",
-    "question_type": "multi_document"
+    "question_type": "multi_document",
+    "category": "multi_document"
   },
   {
     "id": "q051",
@@ -542,7 +592,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "one hour versus 24 hours",
-    "question_type": "multi_document"
+    "question_type": "multi_document",
+    "category": "multi_document"
   },
   {
     "id": "q052",
@@ -553,7 +604,8 @@
     ],
     "relevant_chunk_ids": [],
     "expected_answer": "one hour versus 24 hours",
-    "question_type": "multi_document"
+    "question_type": "multi_document",
+    "category": "multi_document"
   },
   {
     "id": "q053",
@@ -561,7 +613,8 @@
     "relevant_document_ids": [],
     "relevant_chunk_ids": [],
     "expected_answer": "not specified",
-    "question_type": "unanswerable"
+    "question_type": "unanswerable",
+    "category": "unanswerable"
   },
   {
     "id": "q054",
@@ -569,7 +622,8 @@
     "relevant_document_ids": [],
     "relevant_chunk_ids": [],
     "expected_answer": "not specified",
-    "question_type": "unanswerable"
+    "question_type": "unanswerable",
+    "category": "unanswerable"
   },
   {
     "id": "q055",
@@ -577,7 +631,8 @@
     "relevant_document_ids": [],
     "relevant_chunk_ids": [],
     "expected_answer": "not specified",
-    "question_type": "unanswerable"
+    "question_type": "unanswerable",
+    "category": "unanswerable"
   },
   {
     "id": "q056",
@@ -585,7 +640,8 @@
     "relevant_document_ids": [],
     "relevant_chunk_ids": [],
     "expected_answer": "not specified",
-    "question_type": "unanswerable"
+    "question_type": "unanswerable",
+    "category": "unanswerable"
   },
   {
     "id": "q057",
@@ -593,7 +649,8 @@
     "relevant_document_ids": [],
     "relevant_chunk_ids": [],
     "expected_answer": "not specified",
-    "question_type": "unanswerable"
+    "question_type": "unanswerable",
+    "category": "unanswerable"
   },
   {
     "id": "q058",
@@ -601,7 +658,8 @@
     "relevant_document_ids": [],
     "relevant_chunk_ids": [],
     "expected_answer": "not specified",
-    "question_type": "unanswerable"
+    "question_type": "unanswerable",
+    "category": "unanswerable"
   },
   {
     "id": "q059",
@@ -609,7 +667,8 @@
     "relevant_document_ids": [],
     "relevant_chunk_ids": [],
     "expected_answer": "not specified",
-    "question_type": "unanswerable"
+    "question_type": "unanswerable",
+    "category": "unanswerable"
   },
   {
     "id": "q060",
@@ -617,6 +676,118 @@
     "relevant_document_ids": [],
     "relevant_chunk_ids": [],
     "expected_answer": "not specified",
-    "question_type": "unanswerable"
+    "question_type": "unanswerable",
+    "category": "unanswerable"
+  },
+  {
+    "id": "q061",
+    "question": "What nightly lodging amount can an employee claim in the French capital?",
+    "relevant_document_ids": [
+      "finance_expenses",
+      "finance_travel"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "180 EUR",
+    "question_type": "semantic_paraphrase",
+    "category": "semantic_paraphrase"
+  },
+  {
+    "id": "q062",
+    "question": "During a trip to Germany's capital, what accommodation ceiling applies?",
+    "relevant_document_ids": [
+      "finance_travel"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "160 EUR",
+    "question_type": "semantic_paraphrase",
+    "category": "semantic_paraphrase"
+  },
+  {
+    "id": "q063",
+    "question": "How many annual paid workdays are granted to a full-time employee each year?",
+    "relevant_document_ids": [
+      "hr_leave"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "25 days",
+    "question_type": "semantic_paraphrase",
+    "category": "semantic_paraphrase"
+  },
+  {
+    "id": "q064",
+    "question": "What is the weekly remote-work allowance for an eligible staff member?",
+    "relevant_document_ids": [
+      "hr_remote_work"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "up to three days per week",
+    "question_type": "semantic_paraphrase",
+    "category": "semantic_paraphrase"
+  },
+  {
+    "id": "q065",
+    "question": "After a corporate notebook goes missing, what is the reporting deadline?",
+    "relevant_document_ids": [
+      "security_laptop"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "report within one hour",
+    "question_type": "semantic_paraphrase",
+    "category": "semantic_paraphrase"
+  },
+  {
+    "id": "q066",
+    "question": "How long does a critical supplier have to disclose a material incident?",
+    "relevant_document_ids": [
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "within 24 hours",
+    "question_type": "semantic_paraphrase",
+    "category": "semantic_paraphrase"
+  },
+  {
+    "id": "q067",
+    "question": "What minimum number of characters must a Northstar password contain?",
+    "relevant_document_ids": [
+      "security_passwords"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "14 characters",
+    "question_type": "semantic_paraphrase",
+    "category": "semantic_paraphrase"
+  },
+  {
+    "id": "q068",
+    "question": "Who signs off on the contractual terms of a supplier?",
+    "relevant_document_ids": [
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "Legal",
+    "question_type": "semantic_paraphrase",
+    "category": "semantic_paraphrase"
+  },
+  {
+    "id": "q069",
+    "question": "Which team owns technical risk for a vendor?",
+    "relevant_document_ids": [
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "Security",
+    "question_type": "entity_or_acronym",
+    "category": "entity_or_acronym"
+  },
+  {
+    "id": "q070",
+    "question": "What agreement is required for a vendor handling personal data?",
+    "relevant_document_ids": [
+      "legal_vendors"
+    ],
+    "relevant_chunk_ids": [],
+    "expected_answer": "data-processing agreement",
+    "question_type": "entity_or_acronym",
+    "category": "entity_or_acronym"
   }
 ]

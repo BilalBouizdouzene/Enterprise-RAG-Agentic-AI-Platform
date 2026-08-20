@@ -23,11 +23,12 @@ from enterprise_rag.embeddings import create_embedder
 from enterprise_rag.ingestion.chunker import ChunkingConfig
 from enterprise_rag.ingestion.models import DocumentChunk
 from enterprise_rag.ingestion.pipeline import ingest_directory
+from enterprise_rag.llm import create_provider
 from enterprise_rag.operations.jobs import enqueue_index_job
 from enterprise_rag.rag.pipeline import RAGPipeline
 from enterprise_rag.retrieval.dense import DenseRetriever
 from enterprise_rag.retrieval.hybrid import HybridRetriever
-from enterprise_rag.retrieval.reranker import Reranker
+from enterprise_rag.retrieval.reranker import create_reranker
 from enterprise_rag.retrieval.sparse import BM25Retriever
 from enterprise_rag.retrieval.vector_store import QdrantRetriever
 from enterprise_rag.storage.object_store import upload_original
@@ -66,7 +67,14 @@ def load_chunks(path: Path) -> list[DocumentChunk]:
 def create_app(root_dir: str | Path | None = None) -> FastAPI:
     settings = load_settings(root_dir)
     chunks = load_chunks(settings.data_dir / "processed" / "chunks.jsonl")
-    embedder = create_embedder(settings.embedding_model, dimension=settings.embedding_dimension)
+    embedder = create_embedder(
+        settings.embedding_model,
+        dimension=settings.embedding_dimension,
+        batch_size=settings.embedding_batch_size,
+        device=settings.embedding_device,
+        normalize=settings.embedding_normalize,
+        local_files_only=settings.embedding_local_files_only,
+    )
     dense = None
 
     def build_dense(current_chunks: list[DocumentChunk], rebuild: bool = False):
@@ -76,7 +84,17 @@ def create_app(root_dir: str | Path | None = None) -> FastAPI:
         return DenseRetriever(current_chunks, embedder)
 
     dense = build_dense(chunks, rebuild=settings.vector_store == "qdrant")
-    pipeline = RAGPipeline(HybridRetriever(dense, BM25Retriever(chunks)), reranker=Reranker())
+    pipeline = RAGPipeline(
+        HybridRetriever(dense, BM25Retriever(chunks)),
+        provider=create_provider(settings.llm_provider, settings.llm_model, openai_base_url=settings.openai_base_url, ollama_base_url=settings.ollama_base_url),
+        reranker=create_reranker(
+            settings.reranker_model,
+            enabled=settings.reranker_enabled,
+            batch_size=settings.reranker_batch_size,
+            device=settings.reranker_device,
+            local_files_only=settings.embedding_local_files_only,
+        ),
+    )
     agent = EnterpriseAgent(pipeline, str(settings.database_path), settings.max_retries)
     app = FastAPI(title="Enterprise RAG & Agentic AI Platform", version="0.1.0")
     sessions: defaultdict[str, list[dict[str, str]]] = defaultdict(list)
@@ -143,7 +161,17 @@ def create_app(root_dir: str | Path | None = None) -> FastAPI:
         )
         chunks = refreshed_chunks
         dense = build_dense(chunks, rebuild=settings.vector_store == "qdrant")
-        pipeline = RAGPipeline(HybridRetriever(dense, BM25Retriever(chunks)), reranker=Reranker())
+        pipeline = RAGPipeline(
+            HybridRetriever(dense, BM25Retriever(chunks)),
+            provider=create_provider(settings.llm_provider, settings.llm_model, openai_base_url=settings.openai_base_url, ollama_base_url=settings.ollama_base_url),
+            reranker=create_reranker(
+                settings.reranker_model,
+                enabled=settings.reranker_enabled,
+                batch_size=settings.reranker_batch_size,
+                device=settings.reranker_device,
+                local_files_only=settings.embedding_local_files_only,
+            ),
+        )
         agent.rag_pipeline = pipeline
         persist_runtime_index(chunks, dense)
         added_documents = len({chunk.document_id for chunk in chunks} - previous_document_ids)

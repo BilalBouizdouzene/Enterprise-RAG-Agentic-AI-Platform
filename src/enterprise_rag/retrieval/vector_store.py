@@ -23,9 +23,13 @@ class QdrantRetriever:
         self.embedder = embedder
         self.store = store
         self.vectors = embedder.embed([chunk.text for chunk in chunks])
+        collection_was_present = self.store.collection_exists()
         if rebuild:
             self.store.delete_collection()
-        if not self.store.collection_exists() and chunks:
+        collection_changed = False
+        if chunks and hasattr(self.store, "ensure_collection"):
+            collection_changed = bool(self.store.ensure_collection(int(self.vectors.shape[1]), rebuild_on_mismatch=True))
+        if chunks and (rebuild or not collection_was_present or collection_changed):
             self.store.add_chunks(chunks, self.vectors)
 
     def search(self, question: str, top_k: int = 5, metadata_filter: dict | None = None) -> list[RetrievalResult]:

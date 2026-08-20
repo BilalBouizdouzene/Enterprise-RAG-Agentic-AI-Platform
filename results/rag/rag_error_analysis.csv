@@ -1,0 +1,202 @@
+pipeline,question_id,category,error,probable_source
+BM25 RAG,q041,metadata,false refusal,retrieval or validation
+BM25 RAG,q042,metadata,false refusal,retrieval or validation
+BM25 RAG,q043,metadata,retrieval correct but generation incorrect,generation
+BM25 RAG,q044,metadata,retrieval correct but generation incorrect,generation
+BM25 RAG,q049,multi_document,multi-document answer incomplete,context or generation
+BM25 RAG,q050,multi_document,multi-document answer incomplete,context or generation
+BM25 RAG,q051,multi_document,multi-document answer incomplete,context or generation
+BM25 RAG,q052,multi_document,multi-document answer incomplete,context or generation
+BM25 RAG,q053,unanswerable,hallucination / unsupported answer,generation
+BM25 RAG,q054,unanswerable,hallucination / unsupported answer,generation
+BM25 RAG,q055,unanswerable,hallucination / unsupported answer,generation
+BM25 RAG,q056,unanswerable,hallucination / unsupported answer,generation
+BM25 RAG,q057,unanswerable,correct refusal,validation
+BM25 RAG,q058,unanswerable,correct refusal,validation
+BM25 RAG,q059,unanswerable,correct refusal,validation
+BM25 RAG,q060,unanswerable,correct refusal,validation
+BM25 RAG,q062,semantic_paraphrase,false refusal,retrieval or validation
+BM25 RAG,q064,semantic_paraphrase,retrieval correct but generation incorrect,generation
+BM25 RAG,q065,semantic_paraphrase,retrieval incorrect,retrieval
+BM25 RAG,q066,semantic_paraphrase,retrieval incorrect,retrieval
+Dense RAG,q007,semantic_paraphrase,false refusal,retrieval or validation
+Dense RAG,q018,lexical_exact,false refusal,retrieval or validation
+Dense RAG,q019,lexical_exact,false refusal,retrieval or validation
+Dense RAG,q020,lexical_exact,false refusal,retrieval or validation
+Dense RAG,q021,lexical_exact,false refusal,retrieval or validation
+Dense RAG,q022,lexical_exact,false refusal,retrieval or validation
+Dense RAG,q023,lexical_exact,false refusal,retrieval or validation
+Dense RAG,q024,lexical_exact,false refusal,retrieval or validation
+Dense RAG,q025,lexical_exact,retrieval incorrect,retrieval
+Dense RAG,q026,lexical_exact,retrieval incorrect,retrieval
+Dense RAG,q027,lexical_exact,retrieval incorrect,retrieval
+Dense RAG,q033,lexical_exact,false refusal,retrieval or validation
+Dense RAG,q034,lexical_exact,false refusal,retrieval or validation
+Dense RAG,q035,lexical_exact,false refusal,retrieval or validation
+Dense RAG,q036,lexical_exact,false refusal,retrieval or validation
+Dense RAG,q038,lexical_exact,retrieval incorrect,retrieval
+Dense RAG,q039,lexical_exact,retrieval incorrect,retrieval
+Dense RAG,q041,metadata,retrieval correct but generation incorrect,generation
+Dense RAG,q042,metadata,false refusal,retrieval or validation
+Dense RAG,q043,metadata,false refusal,retrieval or validation
+Dense RAG,q044,metadata,false refusal,retrieval or validation
+Dense RAG,q049,multi_document,retrieval incorrect,retrieval
+Dense RAG,q050,multi_document,retrieval incorrect,retrieval
+Dense RAG,q051,multi_document,retrieval incorrect,retrieval
+Dense RAG,q052,multi_document,retrieval incorrect,retrieval
+Dense RAG,q053,unanswerable,hallucination / unsupported answer,generation
+Dense RAG,q054,unanswerable,hallucination / unsupported answer,generation
+Dense RAG,q055,unanswerable,hallucination / unsupported answer,generation
+Dense RAG,q056,unanswerable,hallucination / unsupported answer,generation
+Dense RAG,q057,unanswerable,correct refusal,validation
+Dense RAG,q058,unanswerable,correct refusal,validation
+Dense RAG,q059,unanswerable,correct refusal,validation
+Dense RAG,q060,unanswerable,correct refusal,validation
+Dense RAG,q061,semantic_paraphrase,false refusal,retrieval or validation
+Dense RAG,q062,semantic_paraphrase,retrieval incorrect,retrieval
+Dense RAG,q064,semantic_paraphrase,false refusal,retrieval or validation
+Dense RAG,q065,semantic_paraphrase,false refusal,retrieval or validation
+Dense RAG,q066,semantic_paraphrase,retrieval incorrect,retrieval
+Dense RAG,q068,semantic_paraphrase,retrieval incorrect,retrieval
+Hybrid RAG,q011,lexical_exact,retrieval correct but generation incorrect,generation
+Hybrid RAG,q018,lexical_exact,false refusal,retrieval or validation
+Hybrid RAG,q019,lexical_exact,false refusal,retrieval or validation
+Hybrid RAG,q022,lexical_exact,false refusal,retrieval or validation
+Hybrid RAG,q023,lexical_exact,false refusal,retrieval or validation
+Hybrid RAG,q026,lexical_exact,retrieval incorrect,retrieval
+Hybrid RAG,q027,lexical_exact,retrieval incorrect,retrieval
+Hybrid RAG,q033,lexical_exact,false refusal,retrieval or validation
+Hybrid RAG,q036,lexical_exact,retrieval incorrect,retrieval
+Hybrid RAG,q039,lexical_exact,retrieval incorrect,retrieval
+Hybrid RAG,q041,metadata,retrieval correct but generation incorrect,generation
+Hybrid RAG,q042,metadata,false refusal,retrieval or validation
+Hybrid RAG,q043,metadata,false refusal,retrieval or validation
+Hybrid RAG,q044,metadata,false refusal,retrieval or validation
+Hybrid RAG,q050,multi_document,retrieval incorrect,retrieval
+Hybrid RAG,q051,multi_document,multi-document answer incomplete,context or generation
+Hybrid RAG,q053,unanswerable,hallucination / unsupported answer,generation
+Hybrid RAG,q054,unanswerable,hallucination / unsupported answer,generation
+Hybrid RAG,q055,unanswerable,hallucination / unsupported answer,generation
+Hybrid RAG,q056,unanswerable,hallucination / unsupported answer,generation
+Hybrid RAG,q057,unanswerable,correct refusal,validation
+Hybrid RAG,q058,unanswerable,correct refusal,validation
+Hybrid RAG,q059,unanswerable,correct refusal,validation
+Hybrid RAG,q060,unanswerable,correct refusal,validation
+Hybrid RAG,q062,semantic_paraphrase,retrieval incorrect,retrieval
+Hybrid RAG,q064,semantic_paraphrase,false refusal,retrieval or validation
+Hybrid RAG,q065,semantic_paraphrase,false refusal,retrieval or validation
+Hybrid RAG,q066,semantic_paraphrase,retrieval incorrect,retrieval
+Hybrid RAG,q068,semantic_paraphrase,retrieval incorrect,retrieval
+Hybrid + lexical fallback RAG,q011,lexical_exact,retrieval correct but generation incorrect,generation
+Hybrid + lexical fallback RAG,q018,lexical_exact,false refusal,retrieval or validation
+Hybrid + lexical fallback RAG,q021,lexical_exact,retrieval incorrect,retrieval
+Hybrid + lexical fallback RAG,q022,lexical_exact,false refusal,retrieval or validation
+Hybrid + lexical fallback RAG,q023,lexical_exact,retrieval incorrect,retrieval
+Hybrid + lexical fallback RAG,q024,lexical_exact,false refusal,retrieval or validation
+Hybrid + lexical fallback RAG,q027,lexical_exact,retrieval incorrect,retrieval
+Hybrid + lexical fallback RAG,q033,lexical_exact,retrieval correct but generation incorrect,generation
+Hybrid + lexical fallback RAG,q034,lexical_exact,false refusal,retrieval or validation
+Hybrid + lexical fallback RAG,q035,lexical_exact,retrieval correct but generation incorrect,generation
+Hybrid + lexical fallback RAG,q036,lexical_exact,false refusal,retrieval or validation
+Hybrid + lexical fallback RAG,q039,lexical_exact,retrieval incorrect,retrieval
+Hybrid + lexical fallback RAG,q041,metadata,retrieval correct but generation incorrect,generation
+Hybrid + lexical fallback RAG,q042,metadata,retrieval correct but generation incorrect,generation
+Hybrid + lexical fallback RAG,q043,metadata,false refusal,retrieval or validation
+Hybrid + lexical fallback RAG,q044,metadata,retrieval correct but generation incorrect,generation
+Hybrid + lexical fallback RAG,q050,multi_document,multi-document answer incomplete,context or generation
+Hybrid + lexical fallback RAG,q053,unanswerable,hallucination / unsupported answer,generation
+Hybrid + lexical fallback RAG,q054,unanswerable,hallucination / unsupported answer,generation
+Hybrid + lexical fallback RAG,q055,unanswerable,hallucination / unsupported answer,generation
+Hybrid + lexical fallback RAG,q056,unanswerable,hallucination / unsupported answer,generation
+Hybrid + lexical fallback RAG,q057,unanswerable,correct refusal,validation
+Hybrid + lexical fallback RAG,q058,unanswerable,correct refusal,validation
+Hybrid + lexical fallback RAG,q059,unanswerable,correct refusal,validation
+Hybrid + lexical fallback RAG,q060,unanswerable,correct refusal,validation
+Hybrid + lexical fallback RAG,q062,semantic_paraphrase,retrieval incorrect,retrieval
+Hybrid + lexical fallback RAG,q064,semantic_paraphrase,false refusal,retrieval or validation
+Hybrid + lexical fallback RAG,q065,semantic_paraphrase,false refusal,retrieval or validation
+Hybrid + lexical fallback RAG,q066,semantic_paraphrase,retrieval incorrect,retrieval
+Hybrid + lexical fallback RAG,q068,semantic_paraphrase,retrieval incorrect,retrieval
+Hybrid + CrossEncoder RAG,q018,lexical_exact,false refusal,retrieval or validation
+Hybrid + CrossEncoder RAG,q027,lexical_exact,retrieval incorrect,retrieval
+Hybrid + CrossEncoder RAG,q033,lexical_exact,retrieval correct but generation incorrect,generation
+Hybrid + CrossEncoder RAG,q036,lexical_exact,retrieval correct but generation incorrect,generation
+Hybrid + CrossEncoder RAG,q039,lexical_exact,retrieval incorrect,retrieval
+Hybrid + CrossEncoder RAG,q041,metadata,retrieval correct but generation incorrect,generation
+Hybrid + CrossEncoder RAG,q042,metadata,retrieval correct but generation incorrect,generation
+Hybrid + CrossEncoder RAG,q043,metadata,retrieval correct but generation incorrect,generation
+Hybrid + CrossEncoder RAG,q044,metadata,retrieval correct but generation incorrect,generation
+Hybrid + CrossEncoder RAG,q053,unanswerable,hallucination / unsupported answer,generation
+Hybrid + CrossEncoder RAG,q054,unanswerable,hallucination / unsupported answer,generation
+Hybrid + CrossEncoder RAG,q055,unanswerable,hallucination / unsupported answer,generation
+Hybrid + CrossEncoder RAG,q056,unanswerable,hallucination / unsupported answer,generation
+Hybrid + CrossEncoder RAG,q057,unanswerable,correct refusal,validation
+Hybrid + CrossEncoder RAG,q058,unanswerable,correct refusal,validation
+Hybrid + CrossEncoder RAG,q059,unanswerable,correct refusal,validation
+Hybrid + CrossEncoder RAG,q060,unanswerable,correct refusal,validation
+Hybrid + CrossEncoder RAG,q062,semantic_paraphrase,retrieval incorrect,retrieval
+Hybrid + CrossEncoder RAG,q065,semantic_paraphrase,false refusal,retrieval or validation
+Hybrid + CrossEncoder RAG,q066,semantic_paraphrase,retrieval incorrect,retrieval
+Dense Multilingual E5 RAG,q033,lexical_exact,retrieval correct but generation incorrect,generation
+Dense Multilingual E5 RAG,q034,lexical_exact,retrieval correct but generation incorrect,generation
+Dense Multilingual E5 RAG,q035,lexical_exact,retrieval correct but generation incorrect,generation
+Dense Multilingual E5 RAG,q036,lexical_exact,retrieval correct but generation incorrect,generation
+Dense Multilingual E5 RAG,q041,metadata,retrieval incorrect,retrieval
+Dense Multilingual E5 RAG,q042,metadata,retrieval incorrect,retrieval
+Dense Multilingual E5 RAG,q043,metadata,retrieval incorrect,retrieval
+Dense Multilingual E5 RAG,q044,metadata,retrieval incorrect,retrieval
+Dense Multilingual E5 RAG,q049,multi_document,false refusal,retrieval or validation
+Dense Multilingual E5 RAG,q050,multi_document,false refusal,retrieval or validation
+Dense Multilingual E5 RAG,q051,multi_document,false refusal,retrieval or validation
+Dense Multilingual E5 RAG,q052,multi_document,false refusal,retrieval or validation
+Dense Multilingual E5 RAG,q053,unanswerable,hallucination / unsupported answer,generation
+Dense Multilingual E5 RAG,q054,unanswerable,hallucination / unsupported answer,generation
+Dense Multilingual E5 RAG,q055,unanswerable,hallucination / unsupported answer,generation
+Dense Multilingual E5 RAG,q056,unanswerable,hallucination / unsupported answer,generation
+Dense Multilingual E5 RAG,q057,unanswerable,correct refusal,validation
+Dense Multilingual E5 RAG,q058,unanswerable,correct refusal,validation
+Dense Multilingual E5 RAG,q059,unanswerable,correct refusal,validation
+Dense Multilingual E5 RAG,q060,unanswerable,correct refusal,validation
+Dense Multilingual E5 RAG,q062,semantic_paraphrase,retrieval correct but generation incorrect,generation
+Dense Multilingual E5 RAG,q065,semantic_paraphrase,false refusal,retrieval or validation
+Hybrid Multilingual E5 RAG,q033,lexical_exact,retrieval correct but generation incorrect,generation
+Hybrid Multilingual E5 RAG,q034,lexical_exact,retrieval correct but generation incorrect,generation
+Hybrid Multilingual E5 RAG,q035,lexical_exact,retrieval correct but generation incorrect,generation
+Hybrid Multilingual E5 RAG,q036,lexical_exact,retrieval correct but generation incorrect,generation
+Hybrid Multilingual E5 RAG,q041,metadata,retrieval incorrect,retrieval
+Hybrid Multilingual E5 RAG,q042,metadata,retrieval incorrect,retrieval
+Hybrid Multilingual E5 RAG,q043,metadata,retrieval correct but generation incorrect,generation
+Hybrid Multilingual E5 RAG,q044,metadata,retrieval incorrect,retrieval
+Hybrid Multilingual E5 RAG,q049,multi_document,multi-document answer incomplete,context or generation
+Hybrid Multilingual E5 RAG,q050,multi_document,multi-document answer incomplete,context or generation
+Hybrid Multilingual E5 RAG,q051,multi_document,multi-document answer incomplete,context or generation
+Hybrid Multilingual E5 RAG,q052,multi_document,multi-document answer incomplete,context or generation
+Hybrid Multilingual E5 RAG,q053,unanswerable,hallucination / unsupported answer,generation
+Hybrid Multilingual E5 RAG,q054,unanswerable,hallucination / unsupported answer,generation
+Hybrid Multilingual E5 RAG,q055,unanswerable,hallucination / unsupported answer,generation
+Hybrid Multilingual E5 RAG,q056,unanswerable,hallucination / unsupported answer,generation
+Hybrid Multilingual E5 RAG,q057,unanswerable,correct refusal,validation
+Hybrid Multilingual E5 RAG,q058,unanswerable,correct refusal,validation
+Hybrid Multilingual E5 RAG,q059,unanswerable,correct refusal,validation
+Hybrid Multilingual E5 RAG,q060,unanswerable,correct refusal,validation
+Hybrid Multilingual E5 RAG,q062,semantic_paraphrase,retrieval incorrect,retrieval
+Hybrid Multilingual E5 RAG,q065,semantic_paraphrase,retrieval incorrect,retrieval
+Hybrid + Multilingual CrossEncoder RAG,q033,lexical_exact,retrieval correct but generation incorrect,generation
+Hybrid + Multilingual CrossEncoder RAG,q034,lexical_exact,retrieval correct but generation incorrect,generation
+Hybrid + Multilingual CrossEncoder RAG,q035,lexical_exact,retrieval correct but generation incorrect,generation
+Hybrid + Multilingual CrossEncoder RAG,q036,lexical_exact,retrieval correct but generation incorrect,generation
+Hybrid + Multilingual CrossEncoder RAG,q041,metadata,retrieval correct but generation incorrect,generation
+Hybrid + Multilingual CrossEncoder RAG,q042,metadata,retrieval correct but generation incorrect,generation
+Hybrid + Multilingual CrossEncoder RAG,q043,metadata,retrieval correct but generation incorrect,generation
+Hybrid + Multilingual CrossEncoder RAG,q044,metadata,retrieval correct but generation incorrect,generation
+Hybrid + Multilingual CrossEncoder RAG,q049,multi_document,multi-document answer incomplete,context or generation
+Hybrid + Multilingual CrossEncoder RAG,q053,unanswerable,hallucination / unsupported answer,generation
+Hybrid + Multilingual CrossEncoder RAG,q054,unanswerable,hallucination / unsupported answer,generation
+Hybrid + Multilingual CrossEncoder RAG,q055,unanswerable,hallucination / unsupported answer,generation
+Hybrid + Multilingual CrossEncoder RAG,q056,unanswerable,hallucination / unsupported answer,generation
+Hybrid + Multilingual CrossEncoder RAG,q057,unanswerable,correct refusal,validation
+Hybrid + Multilingual CrossEncoder RAG,q058,unanswerable,correct refusal,validation
+Hybrid + Multilingual CrossEncoder RAG,q059,unanswerable,correct refusal,validation
+Hybrid + Multilingual CrossEncoder RAG,q060,unanswerable,correct refusal,validation
+Hybrid + Multilingual CrossEncoder RAG,q062,semantic_paraphrase,retrieval correct but generation incorrect,generation
+Hybrid + Multilingual CrossEncoder RAG,q065,semantic_paraphrase,retrieval incorrect,retrieval

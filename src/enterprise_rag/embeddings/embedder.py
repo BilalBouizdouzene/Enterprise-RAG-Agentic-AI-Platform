@@ -11,6 +11,7 @@ import hashlib
 import re
 from abc import ABC, abstractmethod
 from collections.abc import Sequence
+from functools import lru_cache
 
 import numpy as np
 
@@ -20,11 +21,11 @@ class BaseEmbedder(ABC):
     dimension: int
 
     @abstractmethod
-    def embed(self, texts: Sequence[str]) -> np.ndarray:
+    def embed(self, texts: Sequence[str], *, is_query: bool = False) -> np.ndarray:
         raise NotImplementedError
 
     def embed_one(self, text: str) -> np.ndarray:
-        return self.embed([text])[0]
+        return self.embed([text], is_query=True)[0]
 
 
 class HashingEmbedder(BaseEmbedder):
@@ -35,7 +36,7 @@ class HashingEmbedder(BaseEmbedder):
         self.dimension = dimension
         self.normalize = normalize
 
-    def embed(self, texts: Sequence[str]) -> np.ndarray:
+    def embed(self, texts: Sequence[str], *, is_query: bool = False) -> np.ndarray:
         matrix = np.zeros((len(texts), self.dimension), dtype=np.float32)
         for row, text in enumerate(texts):
             tokens = re.findall(r"[\wÀ-ÿ]+", text.lower())
@@ -55,21 +56,35 @@ class HashingEmbedder(BaseEmbedder):
 
 
 class SentenceTransformerEmbedder(BaseEmbedder):
-    def __init__(self, model_name: str, batch_size: int = 16, device: str = "cpu", normalize: bool = True):
+    def __init__(
+        self,
+        model_name: str,
+        batch_size: int = 16,
+        device: str = "cpu",
+        normalize: bool = True,
+        local_files_only: bool = False,
+    ):
         try:
             from sentence_transformers import SentenceTransformer
         except ImportError as exc:  # pragma: no cover - optional dependency
             raise RuntimeError("Install the optional 'retrieval' extra for SentenceTransformers") from exc
         self.model_name = model_name
-        self._model = SentenceTransformer(model_name, device=device)
+        model_kwargs = {"local_files_only": True} if local_files_only else {}
+        self._model = SentenceTransformer(model_name, device=device, model_kwargs=model_kwargs)
         self.dimension = int(self._model.get_sentence_embedding_dimension())
         self.batch_size = batch_size
         self.normalize = normalize
+        self.local_files_only = local_files_only
+        self._uses_e5_prefixes = "e5" in model_name.lower()
 
-    def embed(self, texts: Sequence[str]) -> np.ndarray:
+    def embed(self, texts: Sequence[str], *, is_query: bool = False) -> np.ndarray:
+        prepared = list(texts)
+        if self._uses_e5_prefixes:
+            prefix = "query: " if is_query else "passage: "
+            prepared = [prefix + text for text in prepared]
         return np.asarray(
             self._model.encode(
-                list(texts),
+                prepared,
                 batch_size=self.batch_size,
                 normalize_embeddings=self.normalize,
                 show_progress_bar=False,
@@ -78,15 +93,68 @@ class SentenceTransformerEmbedder(BaseEmbedder):
         )
 
 
-def create_embedder(model_name: str = "hashing", **kwargs) -> BaseEmbedder:
-    if model_name.lower() == "hashing":
+MODEL_ALIASES = {
+    "bge": "BAAI/bge-small-en-v1.5",
+    "bge-small": "BAAI/bge-small-en-v1.5",
+    "bge-small-en": "BAAI/bge-small-en-v1.5",
+    "e5": "intfloat/e5-small-v2",
+    "e5-small": "intfloat/e5-small-v2",
+    "multilingual-e5": "intfloat/multilingual-e5-small",
+    "multilingual-e5-small": "intfloat/multilingual-e5-small",
+}
+
+
+@lru_cache(maxsize=8)
+def _create_embedder_cached(
+    model_name: str,
+    dimension: int,
+    batch_size: int,
+    device: str,
+    normalize: bool,
+    local_files_only: bool,
+    allow_fallback: bool,
+) -> BaseEmbedder:
+    canonical_name = MODEL_ALIASES.get(model_name.lower(), model_name)
+    if canonical_name.lower() == "hashing":
         return HashingEmbedder(
-            dimension=int(kwargs.get("dimension", 384)),
-            normalize=bool(kwargs.get("normalize", True)),
+            dimension=dimension,
+            normalize=normalize,
         )
-    return SentenceTransformerEmbedder(
-        model_name=model_name,
-        batch_size=int(kwargs.get("batch_size", 16)),
-        device=str(kwargs.get("device", "cpu")),
-        normalize=bool(kwargs.get("normalize", True)),
+    try:
+        return SentenceTransformerEmbedder(
+            model_name=canonical_name,
+            batch_size=batch_size,
+            device=device,
+            normalize=normalize,
+            local_files_only=local_files_only,
+        )
+    except (ImportError, OSError, RuntimeError, ValueError) as exc:
+        if not allow_fallback:
+            raise
+        fallback = HashingEmbedder(dimension=dimension, normalize=normalize)
+        fallback.requested_model_name = canonical_name
+        fallback.fallback_reason = str(exc)
+        return fallback
+
+
+def create_embedder(model_name: str = "BAAI/bge-small-en-v1.5", **kwargs) -> BaseEmbedder:
+    """Create a cached embedder, with hashing available as an explicit offline fallback.
+
+    ``allow_fallback`` defaults to true for the local application path. Benchmarks can
+    set it to false so an unavailable transformer is reported as skipped instead of
+    being mislabeled as a transformer result.
+    """
+    canonical_name = MODEL_ALIASES.get(str(model_name).lower(), str(model_name))
+    return _create_embedder_cached(
+        canonical_name,
+        int(kwargs.get("dimension", 384)),
+        int(kwargs.get("batch_size", 16)),
+        str(kwargs.get("device", "cpu")),
+        bool(kwargs.get("normalize", True)),
+        bool(kwargs.get("local_files_only", False)),
+        bool(kwargs.get("allow_fallback", True)),
     )
+
+
+def clear_embedder_cache() -> None:
+    _create_embedder_cached.cache_clear()

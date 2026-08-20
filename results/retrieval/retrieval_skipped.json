@@ -1,0 +1,6 @@
+{
+  "Dense BGE": "Install the optional 'retrieval' extra for SentenceTransformers",
+  "BM25 + BGE RRF": "Install the optional 'retrieval' extra for SentenceTransformers",
+  "Dense E5": "Install the optional 'retrieval' extra for SentenceTransformers",
+  "Hybrid + CrossEncoder": "RERANKER_ENABLED=false; set it to true to run the optional CrossEncoder benchmark"
+}

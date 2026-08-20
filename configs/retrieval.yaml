@@ -9,4 +9,5 @@ retrieval:
   final_top_k: 5
   fusion_method: rrf
   reranker_enabled: false
-
+  reranker_batch_size: 16
+  reranker_device: cpu
