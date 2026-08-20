@@ -1,0 +1,12 @@
+chunking:
+  strategy: section
+  chunk_size: 900
+  overlap: 120
+
+retrieval:
+  dense_top_k: 20
+  sparse_top_k: 20
+  final_top_k: 5
+  fusion_method: rrf
+  reranker_enabled: false
+

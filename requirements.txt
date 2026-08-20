@@ -1,0 +1,5 @@
+-e .
+
+# Optional local development extras:
+# pip install -e ".[dev,retrieval,agent,tracking,documents]"
+

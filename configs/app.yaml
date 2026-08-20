@@ -1,0 +1,14 @@
+app:
+  name: Enterprise Knowledge Assistant
+  environment: development
+  log_level: INFO
+  data_dir: data
+  results_dir: results
+
+database:
+  path: data/company.db
+
+agent:
+  max_retries: 2
+  max_history_messages: 8
+

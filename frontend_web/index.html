@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1220" />
+    <title>Northstar Intelligence | Enterprise Knowledge</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">N</div>
+          <div>
+            <strong>Northstar</strong>
+            <span>Enterprise Intelligence</span>
+          </div>
+        </div>
+        <div class="workspace-chip"><span class="status-dot"></span> Local workspace</div>
+        <nav class="nav" aria-label="Main navigation">
+          <button class="nav-item active" data-view="chat"><span>✦</span> Knowledge Assistant</button>
+          <button class="nav-item" data-view="documents"><span>▤</span> Document Explorer</button>
+          <button class="nav-item" data-view="evaluation"><span>◒</span> Evaluation Center</button>
+          <button class="nav-item" data-view="system"><span>◌</span> System Status</button>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="security-note"><span>◆</span><div><strong>Private by design</strong><small>Evidence stays in your workspace.</small></div></div>
+          <div class="version">RAG PLATFORM <b>0.1.0</b></div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumb"><span>Workspace</span><i>/</i><strong id="page-label">Knowledge Assistant</strong></div>
+          <div class="topbar-actions"><span class="api-status"><span class="status-dot"></span><span id="api-label">Checking API…</span></span><button class="outline-button api-key-button" id="api-key-button" type="button">API key</button><button class="icon-button" id="refresh-button" title="Refresh">↻</button><div class="avatar">DS</div></div>
+        </header>
+
+        <section class="view active" id="view-chat">
+          <div class="hero-row">
+            <div><p class="eyebrow">ENTERPRISE KNOWLEDGE LAYER</p><h1>Ask with confidence.</h1><p class="hero-copy">Search internal knowledge across departments, inspect the evidence, and get answers grounded in your company documents.</p></div>
+            <div class="hero-stat"><span class="stat-label">INDEXED KNOWLEDGE</span><strong id="hero-doc-count">—</strong><small>documents in workspace</small></div>
+          </div>
+          <div class="chat-layout">
+            <div class="chat-card">
+              <div class="chat-toolbar"><div><strong>Knowledge Assistant</strong><span>Hybrid retrieval · source-backed answers</span></div><button class="new-chat" id="new-chat">＋ New conversation</button></div>
+              <div class="messages" id="messages"><div class="welcome-message"><div class="welcome-icon">✦</div><h2>What would you like to know?</h2><p>Ask about policies, procedures, expenses, security, or structured company data.</p><div class="prompt-grid"><button data-prompt="What is the maximum hotel reimbursement in Paris?">Travel reimbursement limits <span>→</span></button><button data-prompt="What is the remote work policy?">Remote work policy <span>→</span></button><button data-prompt="What should I do if I lose my laptop?">Lost laptop procedure <span>→</span></button><button data-prompt="How many employees work in France?">Structured workforce data <span>→</span></button></div></div></div>
+              <form class="composer" id="ask-form"><input id="attachment-input" type="file" multiple accept=".pdf,.txt,.md,.markdown,.html,.htm,.docx,.png,.jpg,.jpeg,.webp" hidden /><textarea id="question-input" rows="1" placeholder="Ask a question about your organization…" aria-label="Your question"></textarea><div id="attachment-preview" class="attachment-preview" aria-live="polite"></div><div class="composer-footer"><span id="voice-status"><kbd>Enter</kbd> to send · <kbd>Shift + Enter</kbd> for a new line</span><div class="composer-actions"><button class="attachment-button" id="attachment-button" type="button" title="Upload a document or image">⊕ Attach</button><button class="voice-button" id="voice-button" type="button" title="Ask by voice">◉ Voice</button><button class="send-button" type="submit">Ask assistant <span>↑</span></button></div></div><div id="attachment-status" class="attachment-status" aria-live="polite"></div></form>
+            </div>
+            <aside class="insight-card"><div class="card-heading"><span>How it works</span><span class="live-badge">LIVE</span></div><div class="pipeline"><div class="pipeline-step"><b>01</b><div><strong>Understand</strong><small>Intent & tool routing</small></div></div><div class="pipeline-line"></div><div class="pipeline-step"><b>02</b><div><strong>Retrieve</strong><small>Dense + BM25 hybrid search</small></div></div><div class="pipeline-line"></div><div class="pipeline-step"><b>03</b><div><strong>Ground</strong><small>Evidence validation</small></div></div><div class="pipeline-line"></div><div class="pipeline-step"><b>04</b><div><strong>Answer</strong><small>Citations included</small></div></div></div><div class="insight-footer"><span class="shield">◇</span><p>Every document answer is traceable to a source passage.</p></div></aside>
+          </div>
+        </section>
+
+        <section class="view" id="view-documents"><div class="section-heading"><div><p class="eyebrow">KNOWLEDGE GOVERNANCE</p><h1>Document Explorer</h1><p>Browse the indexed knowledge layer and inspect department coverage.</p></div><div class="section-heading-actions"><input id="upload-input" type="file" multiple accept=".pdf,.txt,.md,.markdown,.html,.htm,.docx,.png,.jpg,.jpeg,.webp" hidden /><button class="accent-button" id="upload-button" type="button">＋ Add documents</button><span id="upload-status" class="upload-status" aria-live="polite"></span><div class="section-kpi"><strong id="document-total">—</strong><span>indexed documents</span></div></div></div><div class="toolbar-row"><div class="search-box"><span>⌕</span><input id="document-search" placeholder="Search by title, department, category…" /></div><select id="department-filter"><option value="">All departments</option></select></div><div class="document-grid" id="document-grid"></div></section>
+
+        <section class="view" id="view-evaluation"><div class="section-heading"><div><p class="eyebrow">QUALITY & OBSERVABILITY</p><h1>Evaluation Center</h1><p>Measured performance from the latest local benchmark run.</p></div><span class="run-date">Latest run · local workspace</span></div><div class="metric-cards" id="metric-cards"></div><div class="evaluation-grid"><div class="panel"><div class="panel-heading"><div><strong>Retrieval comparison</strong><span>Recall@5 across indexed questions</span></div></div><div id="retrieval-chart" class="bar-chart"></div></div><div class="panel"><div class="panel-heading"><div><strong>Agent quality</strong><span>Routing and execution signals</span></div></div><div id="agent-quality" class="quality-list"></div></div></div></section>
+
+        <section class="view" id="view-system"><div class="section-heading"><div><p class="eyebrow">PLATFORM OPERATIONS</p><h1>System Status</h1><p>Runtime health and current pipeline configuration.</p></div><button class="outline-button" id="system-refresh">↻ Refresh status</button></div><div class="status-grid"><div class="panel status-panel"><div class="panel-heading"><strong>Services</strong></div><div class="service-row"><span class="service-icon green">✓</span><div><strong>FastAPI gateway</strong><small>HTTP API and web application</small></div><em id="service-api">Checking</em></div><div class="service-row"><span class="service-icon green">✓</span><div><strong>Knowledge index</strong><small>Dense + sparse retrieval</small></div><em id="service-index">Checking</em></div><div class="service-row"><span class="service-icon blue">◇</span><div><strong>LLM provider</strong><small>Offline template / optional external provider</small></div><em>Available</em></div></div><div class="panel status-panel"><div class="panel-heading"><strong>Runtime details</strong></div><div class="detail-row"><span>Embedding backend</span><strong id="detail-embedding">—</strong></div><div class="detail-row"><span>Indexed documents</span><strong id="detail-documents">—</strong></div><div class="detail-row"><span>Indexed chunks</span><strong id="detail-chunks">—</strong></div><div class="detail-row"><span>API mode</span><strong>Local / private</strong></div></div></div></section>
+      </main>
+    </div>
+    <div class="modal-backdrop" id="api-key-modal" role="dialog" aria-modal="true" aria-labelledby="api-key-title">
+      <form class="modal-card" id="api-key-form">
+        <button class="modal-close" id="api-key-close" type="button" aria-label="Close">×</button>
+        <p class="eyebrow">SECURE WORKSPACE ACCESS</p>
+        <h2 id="api-key-title">Connect to the API</h2>
+        <p>Authentication is enabled. Enter the <code>API_KEY</code> value configured in your local <code>.env</code> file.</p>
+        <label for="api-key-input">API key<input id="api-key-input" type="password" autocomplete="current-password" placeholder="Paste your API key" /></label>
+        <div class="modal-status" id="api-key-status" aria-live="polite"></div>
+        <button class="accent-button modal-submit" type="submit">Save and connect</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>

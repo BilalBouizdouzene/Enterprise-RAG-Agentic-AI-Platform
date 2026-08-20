@@ -1,0 +1,6 @@
+models:
+  embedding: hashing
+  reranker: ""
+  llm_provider: template
+  llm_model: ""
+
