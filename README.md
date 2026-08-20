@@ -8,7 +8,7 @@ Le backend dense principal est configurable et cible `BAAI/bge-small-en-v1.5`, a
 
 - ingestion PDF, TXT, Markdown, DOCX et HTML avec métadonnées et pages PDF ;
 - nettoyage conservateur et chunking fixed/section-aware ;
-- baseline BM25/hashing, embeddings Transformer CPU normalisés, fusion hybride RRF, embedding multilingue E5 (`intfloat/multilingual-e5-small`) et CrossEncoder optionnel (`cross-encoder/ms-marco-MiniLM-L-6-v2` ou `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1`) ;
+- baseline BM25/hashing, embeddings Transformer normalisés, fusion hybride RRF, embedding multilingue E5 (`intfloat/multilingual-e5-small`) et CrossEncoder optionnel (`cross-encoder/ms-marco-MiniLM-L-6-v2` ou `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1`) ;
 - citations `[S1]`, validation des preuves et refus si le corpus est insuffisant ;
 - agent contrôlé avec routage document/SQL/métadonnées/calculateur ;
 - SQLite en lecture seule pour les données structurées synthétiques ;
@@ -100,7 +100,7 @@ Les nombres ci-dessous proviennent de l’exécution locale du benchmark du 20 a
 
 ### Benchmark réel BGE
 
-Résultats mesurés sur 62 questions answerable, 640 documents et 1 936 chunks, sur CPU. Le modèle utilisé est `BAAI/bge-small-en-v1.5`.
+Résultats mesurés sur 62 questions answerable, 640 documents et 1 936 chunks. Le modèle utilisé est `BAAI/bge-small-en-v1.5`.
 
 ```powershell
 $env:EMBEDDING_LOCAL_FILES_ONLY="false"
